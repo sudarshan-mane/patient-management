@@ -15,13 +15,11 @@ public class BillingServiceGrpcClient {
     private static final Logger log = LoggerFactory.getLogger(BillingServiceGrpcClient.class);
     private final BillingServiceGrpc.BillingServiceBlockingStub blockingStub;
 
-    public BillingServiceGrpcClient(@Value("${billing.service.address:localhost}") String serverAddress,
-                                    @Value("${billing.service.grpc.port:9001}") int serverPort
-                                    ) {
-        log.info("Connecting to billing Service at {}:{}", serverAddress, serverPort);
+    public BillingServiceGrpcClient(BillingServiceGrpc.BillingServiceBlockingStub blockingStub) {
 
-        ManagedChannel channel = ManagedChannelBuilder.forAddress(serverAddress, serverPort).usePlaintext().build();
-        blockingStub = BillingServiceGrpc.newBlockingStub(channel);
+        log.info("BillingServiceGrpcClient Connecting to billing Service");
+
+        this.blockingStub = blockingStub;
     }
 
     public BillingResponse createBillingAccount(String patientId, String name, String email){

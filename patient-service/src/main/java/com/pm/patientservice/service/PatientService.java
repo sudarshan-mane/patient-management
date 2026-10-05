@@ -5,6 +5,7 @@ import com.pm.patientservice.dto.PatientResponseDTO;
 import com.pm.patientservice.exception.DuplicateResourceException;
 import com.pm.patientservice.exception.ResourceNotFoundException;
 import com.pm.patientservice.grpc.BillingServiceGrpcClient;
+import com.pm.patientservice.kafka.KafkaProducer;
 import com.pm.patientservice.mapper.PatientMapper;
 import com.pm.patientservice.model.Patient;
 import com.pm.patientservice.repository.PatientRepository;
@@ -18,12 +19,16 @@ import java.util.UUID;
 @Service
 public class PatientService {
     private static final Logger log = LoggerFactory.getLogger(PatientService.class);
-    private PatientRepository patientRepository;
+    private final PatientRepository patientRepository;
     private final BillingServiceGrpcClient billingServiceGrpcClient;
+    private final KafkaProducer kafkaProducer;
 
-    public PatientService(PatientRepository patientRepository, BillingServiceGrpcClient billingServiceGrpcClient) {
+    public PatientService(PatientRepository patientRepository,
+                          BillingServiceGrpcClient billingServiceGrpcClient,
+                          KafkaProducer kafkaProducer) {
         this.patientRepository  = patientRepository;
         this.billingServiceGrpcClient = billingServiceGrpcClient;
+        this.kafkaProducer = kafkaProducer;
     }
 
     public List<PatientResponseDTO> getPatients(){
@@ -44,10 +49,14 @@ public class PatientService {
         Patient patient = PatientMapper.toEntity(patientRequestDTO);
         Patient newPatient = patientRepository.save(patient);
 
-        log.info("Created patient with id {}",newPatient.getId());
+        //GRPC BillingMicroservice call to create BillingAccount
         billingServiceGrpcClient.createBillingAccount(newPatient.getId().toString(),
                 newPatient.getName(),newPatient.getEmail());
-        return PatientMapper.toDTO(newPatient);
+
+        //Kafka Producer Call to
+         kafkaProducer.sendEvent(newPatient);
+
+         return PatientMapper.toDTO(newPatient);
      }
 
      public PatientResponseDTO updatePatient(UUID id, PatientRequestDTO patientRequestDTO){
