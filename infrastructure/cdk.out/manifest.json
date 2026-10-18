@@ -1,0 +1,602 @@
+{
+  "version": "39.0.0",
+  "artifacts": {
+    "floci": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "floci.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}"
+      },
+      "metadata": {
+        "/floci/PatientManagementVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPC522067E7"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet1SubnetC8305E9D"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet1RouteTableA48D3D3E"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet1RouteTableAssociationA39A24A4"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet1DefaultRoute1E407ABB"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet1EIPC113BD7F"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet1NATGatewayB9CF9F92"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet2Subnet07CEC558"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet2RouteTable391C4D34"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet2RouteTableAssociationCAC8BA09"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet2DefaultRoute2DC1F916"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet2EIP208E0C4A"
+          }
+        ],
+        "/floci/PatientManagementVPC/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPublicSubnet2NATGateway28B0784D"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet1Subnet05B10E79"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet1RouteTableE0FA4385"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet1RouteTableAssociationAA604973"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet1DefaultRouteC24DADA9"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet2Subnet8A2E409C"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet2RouteTableBC0C3BB6"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet2RouteTableAssociationC55EBEF2"
+          }
+        ],
+        "/floci/PatientManagementVPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCPrivateSubnet2DefaultRoute98121A2D"
+          }
+        ],
+        "/floci/PatientManagementVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCIGWA0746919"
+          }
+        ],
+        "/floci/PatientManagementVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementVPCVPCGW1FFEFAEB"
+          }
+        ],
+        "/floci/AuthServiceDB/SubnetGroup/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceDBSubnetGroupCFE5A552"
+          }
+        ],
+        "/floci/AuthServiceDB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceDBSecurityGroupBE6D28EB"
+          }
+        ],
+        "/floci/AuthServiceDB/Secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "flociAuthServiceDBSecret61E322ED3fdaad7efa858a3daf9490cf0a702aeb"
+          }
+        ],
+        "/floci/AuthServiceDB/Secret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceDBSecretAttachmentF30406A9"
+          }
+        ],
+        "/floci/AuthServiceDB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceDBC6B688BA"
+          }
+        ],
+        "/floci/patientServiceDb/SubnetGroup/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "patientServiceDbSubnetGroupA84BC0C2"
+          }
+        ],
+        "/floci/patientServiceDb/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "patientServiceDbSecurityGroupDDA3E3BE"
+          }
+        ],
+        "/floci/patientServiceDb/Secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "flocipatientServiceDbSecret4C8097703fdaad7efa858a3daf9490cf0a702aeb"
+          }
+        ],
+        "/floci/patientServiceDb/Secret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "patientServiceDbSecretAttachment54D562F6"
+          }
+        ],
+        "/floci/patientServiceDb/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "patientServiceDbC11A6CE0"
+          }
+        ],
+        "/floci/AuthServiceDBHealthCheck": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceDBHealthCheck"
+          }
+        ],
+        "/floci/PatientServiceDBHealthCheck": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceDBHealthCheck"
+          }
+        ],
+        "/floci/MskCluster": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MskCluster"
+          }
+        ],
+        "/floci/PatientManagementCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementCluster98E10F8D"
+          }
+        ],
+        "/floci/PatientManagementCluster/DefaultServiceDiscoveryNamespace/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientManagementClusterDefaultServiceDiscoveryNamespace72C5F264"
+          }
+        ],
+        "/floci/AuthServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTaskTaskRoleE466B974"
+          }
+        ],
+        "/floci/AuthServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTask82E6680D"
+          }
+        ],
+        "/floci/AuthServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTaskExecutionRoleA1258495"
+          }
+        ],
+        "/floci/AuthServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceTaskExecutionRoleDefaultPolicyF20AD0D3"
+          }
+        ],
+        "/floci/AuthServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceLogGroup34125B38"
+          }
+        ],
+        "/floci/AuthService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:62509)",
+              "Kernel.create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:53243)",
+              "KernelHost.processRequest (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227972)",
+              "KernelHost.run (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:226956)",
+              "Immediate._onImmediate (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227000)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/floci/AuthService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthService3C2B741A"
+          }
+        ],
+        "/floci/AuthService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuthServiceSecurityGroup67F2FA7D"
+          }
+        ],
+        "/floci/BillingServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTaskTaskRole7A547BBF"
+          }
+        ],
+        "/floci/BillingServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTask30D9C66E"
+          }
+        ],
+        "/floci/BillingServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTaskExecutionRole11FE8DE2"
+          }
+        ],
+        "/floci/BillingServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceTaskExecutionRoleDefaultPolicy4F4033C9"
+          }
+        ],
+        "/floci/BillingServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceLogGroupDD61E740"
+          }
+        ],
+        "/floci/BillingService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:62509)",
+              "Kernel.create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:53243)",
+              "KernelHost.processRequest (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227972)",
+              "KernelHost.run (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:226956)",
+              "Immediate._onImmediate (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227000)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/floci/BillingService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceFEB36D90"
+          }
+        ],
+        "/floci/BillingService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BillingServiceSecurityGroup3783AD35"
+          }
+        ],
+        "/floci/AnalyticsServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskTaskRole1ABB10CB"
+          }
+        ],
+        "/floci/AnalyticsServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskC3AFBC47"
+          }
+        ],
+        "/floci/AnalyticsServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskExecutionRoleBAF654B2"
+          }
+        ],
+        "/floci/AnalyticsServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceTaskExecutionRoleDefaultPolicy99868928"
+          }
+        ],
+        "/floci/AnalyticsServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceLogGroupBD82F12A"
+          }
+        ],
+        "/floci/AnalyticsService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:62509)",
+              "Kernel.create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:53243)",
+              "KernelHost.processRequest (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227972)",
+              "KernelHost.run (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:226956)",
+              "Immediate._onImmediate (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227000)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/floci/AnalyticsService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceCD38C492"
+          }
+        ],
+        "/floci/AnalyticsService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AnalyticsServiceSecurityGroupBA6AE98A"
+          }
+        ],
+        "/floci/PatientServiceTask/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskTaskRole4FB5B4E2"
+          }
+        ],
+        "/floci/PatientServiceTask/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskF865B565"
+          }
+        ],
+        "/floci/PatientServiceTask/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskExecutionRole3782903B"
+          }
+        ],
+        "/floci/PatientServiceTask/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceTaskExecutionRoleDefaultPolicy3866E91E"
+          }
+        ],
+        "/floci/PatientServiceLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceLogGroup4A5C3809"
+          }
+        ],
+        "/floci/PatientService": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "Kernel._Kernel_create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:62509)",
+              "Kernel.create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:53243)",
+              "KernelHost.processRequest (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227972)",
+              "KernelHost.run (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:226956)",
+              "Immediate._onImmediate (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227000)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/floci/PatientService/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceA65AB800"
+          }
+        ],
+        "/floci/PatientService/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PatientServiceSecurityGroup547BE1F2"
+          }
+        ],
+        "/floci/APIGatewayTaskDefinition/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinitionTaskRole894A199F"
+          }
+        ],
+        "/floci/APIGatewayTaskDefinition/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinition199BB1B7"
+          }
+        ],
+        "/floci/APIGatewayTaskDefinition/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinitionExecutionRole555CBA21"
+          }
+        ],
+        "/floci/APIGatewayTaskDefinition/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayTaskDefinitionExecutionRoleDefaultPolicy582C1C35"
+          }
+        ],
+        "/floci/ApiGatewayLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayLogGroupA9770429"
+          }
+        ],
+        "/floci/APIGatewayService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBDA2B7609"
+          }
+        ],
+        "/floci/APIGatewayService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBSecurityGroup8524BFD1"
+          }
+        ],
+        "/floci/APIGatewayService/LB/SecurityGroup/to flociAPIGatewayServiceSecurityGroup12CDEA20:4004": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBSecurityGrouptoflociAPIGatewayServiceSecurityGroup12CDEA204004186B53C9"
+          }
+        ],
+        "/floci/APIGatewayService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBPublicListenerD6FA7F47"
+          }
+        ],
+        "/floci/APIGatewayService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLBPublicListenerECSGroupF9D8CC70"
+          }
+        ],
+        "/floci/APIGatewayService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceLoadBalancerDNS7C7318A3"
+          }
+        ],
+        "/floci/APIGatewayService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceServiceURL95056890"
+          }
+        ],
+        "/floci/APIGatewayService/Service": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "minHealthyPercent has not been configured so the default value of 50% is used. The number of running tasks will decrease below the desired count during deployments etc. See https://github.com/aws/aws-cdk/issues/31705 [ack: @aws-cdk/aws-ecs:minHealthyPercent]",
+            "trace": [
+              "Annotations.addMessage (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1608)",
+              "Annotations.addWarningV2 (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/core/lib/annotations.js:1:825)",
+              "new BaseService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/base/base-service.js:1:8100)",
+              "new FargateService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs/lib/fargate/fargate-service.js:1:3551)",
+              "new ApplicationLoadBalancedFargateService (/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-kernel-mQwURS/node_modules/aws-cdk-lib/aws-ecs-patterns/lib/fargate/application-load-balanced-fargate-service.js:1:3340)",
+              "Kernel._Kernel_create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:62509)",
+              "Kernel.create (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:53243)",
+              "KernelHost.processRequest (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227972)",
+              "KernelHost.run (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:226956)",
+              "Immediate._onImmediate (/private/var/folders/sj/9f71k3tn4nd99nm7sqpb2qm40000gn/T/jsii-java-runtime81968699930556832/lib/program.js:1:227000)",
+              "process.processImmediate (node:internal/timers:478:21)"
+            ]
+          }
+        ],
+        "/floci/APIGatewayService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceA5206149"
+          }
+        ],
+        "/floci/APIGatewayService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceSecurityGroup98F3B93B"
+          }
+        ],
+        "/floci/APIGatewayService/Service/SecurityGroup/from flociAPIGatewayServiceLBSecurityGroup975B0FBC:4004": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "APIGatewayServiceSecurityGroupfromflociAPIGatewayServiceLBSecurityGroup975B0FBC4004355027DA"
+          }
+        ]
+      },
+      "displayName": "floci"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
