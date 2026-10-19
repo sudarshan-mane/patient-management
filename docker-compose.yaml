@@ -9,7 +9,8 @@ services:
     ports:
       - "5001:5432"
     volumes:
-      - /Users/sudarshan/db_volumes/patient-service:/var/lib/postgresql
+      # - /Users/sudarshan/db_volumes/patient-service:/var/lib/postgresql
+      - patient-service-data:/var/lib/postgresql/data
     networks:
       - internal
 
@@ -23,7 +24,8 @@ services:
     ports:
       - "5002:5432"
     volumes:
-      - /Users/sudarshan/db_volumes/auth-service:/var/lib/postgresql
+      # - /Users/sudarshan/db_volumes/auth-service:/var/lib/postgresql
+      - auth-service-data:/var/lib/postgresql/data
     networks:
       - internal
 
@@ -137,3 +139,7 @@ services:
 networks:
   internal:
     driver: bridge
+
+volumes:
+  patient-service-data:
+  auth-service-data:
