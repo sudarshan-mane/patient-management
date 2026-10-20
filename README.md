@@ -13,32 +13,6 @@
 A Healthcare admin portal and microservices backend. Demonstrates strict microservice data isolation, low-latency inter-service **gRPC** communication, asynchronous event streaming with **Kafka**, and centralized authentication.
 
 ---
-## ⚡ Key Architectural Highlights
-
-- **Database-per-Service**: Independent PostgreSQL instances for `auth-service` and `patient-service`, guaranteeing zero schema coupling and full data isolation.
-- **Polyglot Inter-Service Communication**:
-  - **REST & gRPC**: REST for client-facing APIs and gRPC for high-performance inter-service communication (patient-service <-> billing-service).
-  - **Kafka (Event-Driven)**: Non-blocking, asynchronous pub/sub messaging decoupling core patient operations from downstream analytics.
-- **Edge Security Filter**: Custom `JwtValidationGatewayFilterFactory` on Spring Cloud Gateway ensures zero unauthorized traffic enters the private network.
-
----
-
-## Infrastructure Deployment
-
-- **Live Production Hosting**: Containerized with Docker Compose & deployed on an Oracle Cloud (OCI) ARM instance.
-- **Infrastructure as Code - IoC**: AWS CDK in Java for production-grade AWS deployment (ECS, RDS, MSK, ALB).
-- **Local Cloud Emulation**: Floci.io / LocalStack for zero-cost CloudFormation testing.
-
----
-
-## 🛠️ Tech Stack
-
-- **Backend**: Java 21, Spring Boot 3, Spring Cloud Gateway, Spring Data JPA, Spring Security
-- **Protocols & Streaming**: REST, gRPC, Protocol Buffers (Protobuf), Apache Kafka 4.2.2 (KRaft)
-- **Database**: PostgreSQL 18
-- **DevOps, Cloud & IaC**: Docker, Docker Compose, Oracle Cloud Infrastructure (OCI) & AWS CDK via floci.io
-
----
 
 ## 🏛️ System Architecture
 
@@ -68,6 +42,33 @@ flowchart LR
     PatientService -->|Publish Events| Kafka
     Kafka -->|Consume Events| AnalyticsService
 ```
+
+---
+
+## ⚡ Key Architectural Highlights
+
+- **Database-per-Service**: Independent PostgreSQL instances for `auth-service` and `patient-service`, guaranteeing zero schema coupling and full data isolation.
+- **Polyglot Inter-Service Communication**:
+  - **REST & gRPC**: REST for client-facing APIs and gRPC for high-performance inter-service communication (patient-service <-> billing-service).
+  - **Kafka (Event-Driven)**: Non-blocking, asynchronous pub/sub messaging decoupling core patient operations from downstream analytics.
+- **Edge Security Filter**: Custom `JwtValidationGatewayFilterFactory` on Spring Cloud Gateway ensures zero unauthorized traffic enters the private network.
+
+---
+
+## Infrastructure Deployment
+
+- **Live Production Hosting**: Containerized with Docker Compose & deployed on an Oracle Cloud (OCI) ARM instance.
+- **Infrastructure as Code - IoC**: AWS CDK in Java for production-grade AWS deployment (ECS, RDS, MSK, ALB).
+- **Local Cloud Emulation**: Floci.io / LocalStack for zero-cost CloudFormation testing.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Backend**: Java 21, Spring Boot 3, Spring Cloud Gateway, Spring Data JPA, Spring Security
+- **Protocols & Streaming**: REST, gRPC, Protocol Buffers (Protobuf), Apache Kafka 4.2.2 (KRaft)
+- **Database**: PostgreSQL 18
+- **DevOps, Cloud & IaC**: Docker, Docker Compose, Oracle Cloud Infrastructure (OCI) & AWS CDK via floci.io
 
 ---
 
